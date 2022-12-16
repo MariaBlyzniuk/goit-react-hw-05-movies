@@ -26,7 +26,6 @@ const Reviews = () => {
       {error && <div>{error}</div>}
       <ul>
         {reviews.map(review => {
-          // console.log(review);
           return (
             <li key={review.id}>
               <p>Author: {review.author}</p>
@@ -35,7 +34,6 @@ const Reviews = () => {
           );
         })}
       </ul>
-      {/* {reviews} */}
     </>
   );
 };

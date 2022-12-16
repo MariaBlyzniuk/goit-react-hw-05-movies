@@ -15,7 +15,7 @@ export default function MovieDetailsPage() {
   const getYear = () => new Date(movie.release_date).getFullYear();
 
   const { movieId } = useParams();
-  // let history = createBrowserHistory();
+  
   const location = useLocation();
   const navigate = useNavigate();
   console.log(location);
@@ -25,8 +25,6 @@ export default function MovieDetailsPage() {
   };
 
   const handleClick = () => navigate(location?.state?.from ?? '/');
-  // history.back();
-  // history.forward();
 
   useEffect(() => {
     setLoading(true);
@@ -49,7 +47,6 @@ export default function MovieDetailsPage() {
         </button>
 
         {movie && <PageHeading text={movie.title} />}
-        {/* <h2>Movie Review</h2> */}
         {loading && 'Loading ...'}
         {error && <div>{error}</div>}
         {movie && (

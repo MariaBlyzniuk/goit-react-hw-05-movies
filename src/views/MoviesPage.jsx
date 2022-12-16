@@ -40,7 +40,6 @@ const MoviesPage = () => {
     fetchMovie();
   }, [searchRequest]);
 
-  // onSubmit
   function onSubmit(value) {
     setSearchParams({ query: `${value}` });
   }
@@ -49,7 +48,6 @@ const MoviesPage = () => {
     <>
       <Container>
         <PageHeading text={'Movie Search'} />
-        {/* <h1>Movies search</h1> */}
         {loading && 'Loading ...'}
         {error && <div>{error}</div>}
 

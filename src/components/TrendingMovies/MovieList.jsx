@@ -2,31 +2,27 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const MovieList = ({ movies, prevLocation }) => {
-  // const location = useLocation();
-  // console.log(location.pathname);
-  return (
+    return (
     <>
-      <ul>
+        <ul>
         {movies.map(({ id, original_title }) => (
-          <li key={id}>
+            <li key={id}>
             <Link to={`/movies/${id}`} state={{ from: prevLocation }}>
-              {/* <Link to={`/movies/${id}`} state={{ from: location.pathname }}> */}
-              <h3>{original_title}</h3>
+                <h3>{original_title}</h3>
             </Link>
-          </li>
+            </li>
         ))}
-      </ul>
+        </ul>
     </>
-  );
+    );
 };
 
 MovieList.propTypes = {
-  // prevLocation: PropTypes.object.isRequired,
-  movies: PropTypes.arrayOf(
+    movies: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      original_title: PropTypes.string.isRequired,
+        id: PropTypes.number.isRequired,
+        original_title: PropTypes.string.isRequired,
     })
-  ).isRequired,
+    ).isRequired,
 };
 export default MovieList;

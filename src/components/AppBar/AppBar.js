@@ -1,5 +1,5 @@
 import s from './AppBar.module.css';
-import Navigation from 'components/MoviesPage/SearchBar';
+import Navigation from 'components/Navigation/Navigation';
 import Container from 'components/Container/Container';
 
 export default function Appbar() {

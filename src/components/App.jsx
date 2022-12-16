@@ -31,7 +31,7 @@ export const App = () => {
   return (
     <>
       <Appbar />
-      {/* <SearchBar></SearchBar> */}
+        {/* <SearchBar></SearchBar>  */}
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route index element={<HomePage />}></Route>
